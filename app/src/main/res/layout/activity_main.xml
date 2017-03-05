@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.akostyukewicz.bottomsheetpanel.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/firstLayoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="First layout" />
+
+        <Button
+            android:id="@+id/secondLayoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Second layout" />
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Closed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:layout_below="@+id/disableHalfBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/disableHalfBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disable half status"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
+    <com.akostyukewicz.bottomsheet.BottomSheet
+        android:id="@+id/bottomSheet"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_with_shadow"
+        android:visibility="visible">
+
+    </com.akostyukewicz.bottomsheet.BottomSheet>
+
+</RelativeLayout>
